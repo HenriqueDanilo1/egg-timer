@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Egg timer &lt;3</title>
+    <link rel="shortcut icon" href="images/neymar.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <span>Egg timer &lt;3</span>
+        <div>
+          <button
+            id="minimize"
+            onclick="neymar()"
+            style="background-image: url(images/minimize.png)"
+          ></button>
+          <button
+            id="close"
+            onclick="neymar()"
+            style="background-image: url(images/close.png)"
+          ></button>
+        </div>
+      </nav>
+      <div class="content">
+        <!-- display flex -->
+        <div class="step" id="step1" style="display: flex">
+          <span class="title title1">Let's time<br />your egg!</span>
+          <button onclick="start()" class="common">Start</button>
+        </div>
+        <div class="step" id="step2">
+          <span class="title title2">What are you making today?</span>
+          <div class="options">
+            <button onclick="cook(.02)">
+              <img src="images/soft.png" alt="soft" /><br />
+              Soft (3 min)
+            </button>
+            <button onclick="cook(5)">
+              <img src="images/medium.png" alt="Medium" /><br />
+              Medium (5 min)
+            </button>
+            <button onclick="cook(7)">
+              <img src="images/hard.png" alt="Hard" /><br />
+              Hard (7 min)
+            </button>
+            <button onclick="cook(10)">
+              <img src="images/extra-hard.png" alt="Extra hard" /><br />
+              Extra hard (10 min)
+            </button>
+          </div>
+        </div>
+        <div class="step" id="step3">
+          <span class="title title3">Your egg is ready in...</span>
+          <img src="images/cooking.gif" alt="cooking gif" />
+          <div id="time"></div>
+        </div>
+        <div class="step" id="step4">
+          <span class="title title4">Your egg is done!</span>
+          <img src="images/done.gif" alt="done gif" />
+          <div>
+            <button onclick="snooze()" class="common">Snooze</button>
+            <button onclick="MYclose()" class="common">Close</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>
